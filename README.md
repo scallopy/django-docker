@@ -7,7 +7,9 @@ requirements.txt
 
 1. Create django project
 
+```
 $ docker-compose run web django-admin startproject scallopy .
+```
 
 Change permissions from:
 
@@ -35,7 +37,26 @@ total 24
 -rw-r--r-- 1 scaly scaly   12 Jun 19 16:16 requirements.txt
 drwxr-xr-x 2 scaly scaly 4096 Jun 19 16:45 scallopy
 ```
-3. Run server:
+3. Run container:
 ```
 $ docker-compose up
 ```
+4. Create app with docker:
+- create new terminal
+- add user to the docker group:
+```
+$ sudo groupadd docker
+$ sudo gpasswd -a $USER docker
+$ newgrp docker
+```
+- run container
+```
+$ docker-compose up
+```
+
+- use `$ docker ps` to view process and your name, (in this case "django-docker_web_1_35f8c3c4163a")
+- start new app execute this name:
+```
+$ docker exec django-docker_web_1_35f8c3c4163a python manage.py startapp greet
+```
+

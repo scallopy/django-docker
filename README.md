@@ -1,9 +1,18 @@
 # django-docker
 
+```
+install docker
+https://linuxize.com/post/how-to-install-and-use-docker-on-debian-9/
+install docker-compose
+https://linuxize.com/post/how-to-install-and-use-docker-compose-on-debian-9/
+```
+
 1. create files:
+```
 docker-compose.yml
 Dockerfile
 requirements.txt
+```
 
 1. Create django project
 

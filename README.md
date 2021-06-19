@@ -59,4 +59,7 @@ $ docker-compose up
 ```
 $ docker exec django-docker_web_1_35f8c3c4163a python manage.py startapp greet
 ```
-
+- give permission for new app:
+```
+$ sudo chown -R $USER:$USER .
+```

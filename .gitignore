@@ -1,0 +1,7 @@
+*.pyc
+*__pycache__*
+env/
+venv/
+media/
+db.sqlite3
+secrets.sh

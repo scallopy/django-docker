@@ -72,3 +72,8 @@ $ docker exec django-docker_web_1_35f8c3c4163a python manage.py startapp greet
 ```
 $ sudo chown -R $USER:$USER .
 ```
+
+5. Create superuser with docker
+```
+docker-compose run --rm app python manage.py createsuperuser
+```

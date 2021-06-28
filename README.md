@@ -167,3 +167,29 @@ Error starting userland proxy: listen tcp 0.0.0.0:5432: bind: address already in
  (django-docker) scaly@debian:~/djdo/django-docker$ sudo kill 9731
  (django-docker) scaly@debian:~/djdo/django-docker$ docker-compose up
  ```
+
+ # Add manage.sh file:
+
+ ```
+add manage.sh file
+```
+# make script file executable:
+```
+$ sudo ls -l
+-rw-r--r-- 1 scaly docker   57 Jun 28 11:57 manage.sh
+
+$ sudo chown -R $USER:$USER .
+-rw-r--r-- 1 scaly scaly   57 Jun 28 11:57 manage.sh
+```
+or
+```
+$ chmod +x manage.sh
+
+$ ./manage.sh migrate
+Starting django-docker_db_1_601b55d78a44 ... done
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+  Running migrations:
+    No migrations to apply.
+
+ ```
